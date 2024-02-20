@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Itim', cursive;
+    background: #fff;
+    position: relative;
+}
+
+#home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 10px solid #ffcd02;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 125px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.header .left-img img {
+    width: 150px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.header .middle-logo img {
+    width: 200px;
+    height: 150px;
+}
+
+.header .right-img img {
+    width: 150px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.main {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .main-header {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main .main-header .main-dropdown label {
+    color: #2651fb;
+}
+
+.main .main-header .main-dropdown select {
+    color: black;
+    background-color: #fff;
+}
+
+.main .main-header .main-search_bar input {
+    border: 2px solid #2651fb;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: normal;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.main .main-header .main-favList button {
+    background-color: #2651fb;
+    padding: 5px;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.main .main-header .main-favList button:hover {
+    background-color: #112d9c;
+    color: #fff;
+    cursor: pointer;
+}
+
+.main-search_bar input::placeholder {
+    font-size: 15px;
+    color: #2651fb;
+    font-weight: 400;
+    font-family: 'Itim';
+    line-height: normal;
+    text-align: center;
+}
+
+.main-search_bar input:focus {
+    border: 5px solid #2651fb;  
+    outline: none;
+}
+
+.main-search_bar .search--btn {
+    background-color: #2651fb;
+    color: #fff;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 5px;
+    width: 50px;
+}
+
+.main-search_bar .clear--btn {
+    background-color: #dd3113;
+    color: #fff;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 5px;
+    width: 50px;
+}
+
+.main-search_bar button:hover {
+    background-color: #112d9c;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+.main .card-container {
+    background-color: #fff;
+    width: 100%;
+    height: 50vh;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    overflow: auto;
+}
+
+.main .card-container a{
+    text-decoration: none;
+    color: #000;
+}
+
+.main .card-container .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 24px;
+    border: 1px solid #000;
+    background: #FFF;
+    padding: 10px;
+    width: 120px;
+    height: 140px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.main .card-container .card-wrapper:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(16, 40, 180, 0.699);
+}
+
+.main .card-container .card-wrapper i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.cards img {
+    width: 100px; 
+}
+
+.card-container--footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+.card-container--footer .btn {
+    color: #fff;
+    font-size: 15px;
+    background-color: #2651fb;
+    font-weight: 400;
+    font-family: 'Itim';
+    line-height: normal;
+    text-align: center;
+    padding: 10px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card-container--footer .prev-btn {
+    visibility: hidden;
+}
+
+.card-container--footer .btn:hover {
+    background-color: #0e2ba1;
+}
+
+.card-container--footer .page-count p {
+    color: #0e2ba1;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Itim', cursive;
+}
+
+.favroite-card {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background-color: #fff;
+    height: 100vh;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.favroite-card h2 {
+    color: #ffcd02;
+    font-weight: 400;
+    font-family: 'Itim', cursive;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.favroite-card .fav-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    height: 75%;
+}
+
+.favroite-card .fav-list .items {
+    width: 80%;
+    height: 80px;
+    margin-bottom: 8px;
+    display: flex;
+    padding: 8px;
+    border-radius: 0px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow:  5px 5px 10px #ededed,
+             -5px -5px 10px #ffffff;
+}
+
+.favroite-card .fav-list .items img{
+    width: 80px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.favroite-card .fav-list .items p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.favroite-card .fav-card_bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+.favroite-card .fav-card_bottom .fav-close--btn {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    cursor: pointer;
+    font-size: 21px;
+}
+
+.favroite-card .fav-card_bottom .fav-clear--btn {
+    background-color: #332f2f;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    cursor: pointer;
+    font-size: 21px;
+}
+
+.favroite-card.active {
+    left: calc(100% - 500px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure overlay is above main content */
+    display: none;
+}
+
+/* media queries */
+@media screen and (max-width:800px){
+    .main .card-container {
+        grid-template-columns: repeat(4, 1fr);
+        overflow: auto;
+    }
+    .main .main-header .main-search_bar input {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width:660px){
+    .header {
+        margin-bottom: 0;
+        margin-top: 0;
+        height: 100px;
+    }
+    .main .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        overflow: auto;
+    }
+
+    .header .left-img img {
+        width: 120px;
+        height: 90px;
+        object-fit: contain;
+        animation: zoom .5s alternate infinite;
+    }
+    
+    .header .middle-logo img {
+        width: 150px;
+        height: 120px;
+    }
+    
+    .header .right-img img {
+        width: 120px;
+        height: 90px;
+        object-fit: contain;
+        animation: zoom .5s  alternate infinite ;
+    }
+
+    .main .main-header {
+        display: block;
+    }
+
+    .main .main-header .main-search_bar {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .favroite-card.active {
+        left: calc(100% - 299px);
+    }
+
+    .favroite-card {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:515px){
+    .main .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        overflow-y: auto;
+    }
+
+    .header {
+        height: 100px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .header .left-img img {
+        display: none;
+    }
+    
+    .header .middle-logo img {
+        width: 110px;
+        height: 90px;
+    }
+    
+    .header .right-img img {
+        display: none;
+    }
+
+    .main .main-header .main-search_bar input {
+        width: 160px;
+    }
+
+    .main-search_bar input::placeholder {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .main .card-container .cards {
+        padding: 10px;
+        width: 120px;
+        height: 140px;
+    }
+}
+
+
+
+

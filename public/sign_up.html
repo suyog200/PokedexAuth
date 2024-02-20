@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <title>Sign up | Pokedex</title>
+</head>
+<body>
+    <div class="main-box">
+        <div class="box-head">
+            <img src="images/logo.png" alt="logo">
+            <p class="title-head">Create your account</p>
+        </div>
+        <div class="input-box">
+            <form action="/signup" method="POST"> <!-- Added form tag and action -->
+                <input type="text" name="username" placeholder="Username"> <!-- Added name attribute -->
+                <input type="email" name="email" placeholder="Email"> <!-- Added name attribute -->
+                <input type="password" name="password" placeholder="Password"> <!-- Added name attribute -->
+                <input type="password" name="confirmPassword" placeholder="Confirm password"> <!-- Added name attribute -->
+                <button type="submit" class="login-btn">Sign up</button> <!-- Changed button type to submit -->
+            </form>
+            <p>Already have an account?<span><a href="index.html">Login</a></span></p>
+        </div>
+    </div>
+</body>
+</html>

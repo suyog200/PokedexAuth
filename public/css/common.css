@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Itim', cursive;
+    background: url('../images/bg-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.main-box {
+    min-height: 450px;
+    min-width: 350px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.box-head {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.box-head img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.title-head {
+    text-align: center;
+    font-size: 30px;
+    line-height: normal;
+    font-weight: 400;
+}
+
+.main-box .input-box form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.input-box input:focus{
+    outline: none;
+}
+
+
+.input-box input::placeholder {
+    color: black;
+    font-weight: 400;
+    font-family: 'Itim', cursive;
+    line-height: normal;
+    font-size: 18px;
+}
+
+.login-btn {
+    border-radius: 20px;
+    background-color: #1E4BEA;
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    margin: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.login-btn a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Itim', cursive;
+}
+
+.login-btn:hover {
+    background-color: #0d31af;
+    cursor: pointer;
+}
+
+.input-box p {
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

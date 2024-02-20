@@ -1,0 +1,4 @@
+UCyNN80WdEvM1BZa
+charisuyog13
+
+mongodb+srv://charisuyog13:<password>@test-db.yiilw52.mongodb.net/?retryWrites=true&w=majority

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Itim', cursive;
+    background: #fff;
+}
+
+#info-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.header img {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.main-content {
+    width: 100%;
+    border: 10px solid #FFCD02;
+    background: #FFF;
+    padding: 20px;
+    display: flex;
+}
+
+.main-content .left-img {
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.main-content .left-img img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.main-content .right-info {
+    width: 100%;
+    padding: 20px;
+}
+
+.main-content .right-info .right-info-text p{
+    color: #000;
+    font-family: Itim;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2px;
+}
+
+.main-content .right-info .right-info-text ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-content .right-info .right-info-text ul li{
+    display: inline;
+    margin-right: 10px;
+    color: #000;
+    font-family: Itim;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-content .right-info{
+    width: 100%;
+}
+
+.tab-container {
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 4px 5px 9px 0px rgba(0, 0, 0, 0.384);
+    margin-top: 15px;
+}
+
+.tab-container .tab-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.tab-box .tab-btn {
+    font-size: 16px;
+    font-weight: 600; 
+    color: black;
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.tab-box .tab-btn.active {
+    color: #1144eb;
+}
+
+.tab-content {
+    padding: 10px;
+}
+
+.tab-content .tab-content-box {
+    display: none;
+    animation: moving .5s ease;
+    height: 200px;
+    overflow: auto;
+}
+
+.tab-content .tab-content-box ul {
+    margin-left: 20px;
+    list-style: decimal;
+}
+
+.tab-content .tab-content-box ul li{
+    font-size: 18px;
+    text-transform: capitalize;
+    line-height: normal;
+    font-weight: 200;
+    list-style-position: inside;
+}
+
+.main-footer {
+    margin-top: 10px;
+}
+
+.main-footer .back-btn {
+    background-color: red;
+    padding: 5px;
+    outline: none;
+    border: none;
+}
+
+.main-footer .back-btn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-footer .back-btn:hover {
+    background-color: rgb(184, 8, 8);
+    cursor: pointer;
+} 
+
+/* For Webkit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #ffffff; /* Color of the scrollbar track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
+  }
+
+@keyframes moving {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.tab-content .tab-content-box.active {
+    display: block;
+}
+
+.tab-content .tab-content-box p {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:660px){
+    .main-content {
+        display: block;
+        padding: 10px;
+    }
+}
